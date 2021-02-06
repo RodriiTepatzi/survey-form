@@ -1,0 +1,147 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#main_container
+{
+    display: grid;
+    height: auto;
+    width: 100vw;
+    grid-template-areas: 
+    "header"
+    "content"                        
+    ;
+    grid-template-rows: 100px auto;
+    grid-row-gap: 10px;
+    align-content: center;
+    background: url(../img/bg.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+#header
+{
+    top: 5px;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: auto;
+    width:25vw;
+    grid-area: header;
+    display: grid;
+    grid-template-rows: 40px 40px;
+    align-content: center;
+    text-align: center;
+    padding: 0.4em 1.4em 0.4em 1.4em;
+    vertical-align: middle;
+    height: auto;
+    overflow: hidden;
+
+}
+
+#title
+{
+    color: rgb(201, 216, 157);
+}
+
+#description
+{
+    color: honeydew;
+    top: 20px;
+    font-size: 12px;
+}
+
+#survey-container
+{
+    grid-area: content;
+    display: block;
+    margin: auto;
+    width: 25vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1.4em;
+}
+
+#survey-form
+{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    grid-gap: .8em;
+    padding: 1.2em;
+}
+
+label
+{
+    position: relative;
+    grid-row: auto;
+    width: 100%;
+    color: honeydew;
+}
+
+input
+{
+    position: relative;
+    grid-row: auto;
+    border: none;
+    padding: 1em;
+}
+
+button
+{
+    grid-row: auto;
+    border: none;
+    padding: 1em;
+}
+
+textarea
+{
+    grid-row: auto;
+    border: none;
+    padding: 1em;
+}
+
+select
+{
+    grid-row: auto;
+    border: none;
+    padding: 1em;
+}
+
+[type="checkbox"]
+{
+  height: 18px;
+  width: 18px;
+  background-color: #eee;
+}
+
+input:checked ~ [type="checkbox"]
+{
+    background:coral;
+}
+
+#checkbox_container
+{
+    grid-template-columns: auto;
+    align-self: center;
+}
+
+#radio_container
+{
+    grid-template-columns: auto;
+    align-self: center;
+}
+
+@keyframes input-box-animation
+{
+    0%{
+        transform: scale(1.0);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1.0);
+    }
+}
